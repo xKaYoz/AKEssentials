@@ -1,0 +1,12 @@
+name: AkEssentials
+version: 0.0.1
+main: me.kayoz.akessentials.AkEssentials
+commands:
+    message:
+       description: Send a message to a player!
+       aliases: [msg, m, whisper, w]
+    fly:
+       description: Enable or Disable your flight!
+    tp:
+       description: Teleport to a Player
+       aliases: [tport, teleport]

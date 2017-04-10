@@ -1,0 +1,3 @@
+name: AkEssentials
+version: ${project.version}
+main: me.kayoz.akessentials.AkEssentials
