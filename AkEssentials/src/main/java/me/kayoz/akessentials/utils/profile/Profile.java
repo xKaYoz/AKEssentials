@@ -3,6 +3,7 @@ package me.kayoz.akessentials.utils.profile;
 import lombok.Getter;
 import me.kayoz.akessentials.utils.profile.ores.Ores;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
