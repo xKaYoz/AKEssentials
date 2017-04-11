@@ -29,10 +29,8 @@ public class ProfileListener implements Listener{
 
         Profile profile = ProfileManager.getProfile(e.getPlayer());
 
-        if(profile != null) {
+        if(profile != null){
             pm.unregister(ProfileManager.getProfile(e.getPlayer()));
-            //TODO Save profile in PlayerData
         }
     }
-
 }

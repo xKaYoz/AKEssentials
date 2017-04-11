@@ -1,6 +1,5 @@
 package me.kayoz.akessentials.utils.profile;
 
-import lombok.Getter;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
@@ -24,6 +23,7 @@ public class ProfileManager {
         if(p == null){
             return null;
         }
+
         for(Profile profile : getProfiles()){
             if(profile.getUuid().equals(p.getUniqueId())){
                 return profile;

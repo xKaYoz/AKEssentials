@@ -20,7 +20,7 @@ public enum Ores {
     EMERALD(Material.EMERALD_ORE),
     DIAMOND(Material.DIAMOND_ORE);
 
-    @Getter private Material material;
+    @Getter private final Material material;
 
     Ores(Material material){
         this.material = material;
@@ -34,5 +34,7 @@ public enum Ores {
         }
         return null;
     }
+
+
 
 }

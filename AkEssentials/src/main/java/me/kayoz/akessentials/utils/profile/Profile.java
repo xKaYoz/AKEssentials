@@ -15,12 +15,11 @@ import java.util.UUID;
 
 public class Profile {
 
-    @Getter private final UUID uuid;
-    @Getter private final String name;
+    @Getter public final UUID uuid;
+    @Getter public final String name;
     @Getter private final Map<Ores, Integer> ores;
 
-
-    public Profile(UUID uuid, String name) {
+    public Profile(UUID uuid, String name){
         this.uuid = uuid;
         this.name = name;
         this.ores = new HashMap<>();

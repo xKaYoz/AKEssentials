@@ -30,8 +30,8 @@ public final class AkEssentials extends JavaPlugin {
 
         pm.registerEvents(new JoinEvent(), this);
         pm.registerEvents(new QuitEvent(), this);
-        pm.registerEvents(new OresListener(), this);
         pm.registerEvents(new ProfileListener(), this);
+        pm.registerEvents(new OresListener(), this);
     }
 
     private void registerCommands() {
