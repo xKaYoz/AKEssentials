@@ -1,0 +1,5 @@
+name: Bedwars
+version: ${project.version}
+main: me.kayoz.bedwars.Bedwars
+authors: [KaYoz]
+description: Bedwars Speed Coding

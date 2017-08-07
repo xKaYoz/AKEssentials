@@ -1,9 +1,7 @@
 package me.kayoz.akessentials;
 
 import lombok.Getter;
-import me.kayoz.akessentials.commands.FlyCommand;
-import me.kayoz.akessentials.commands.MessageCommand;
-import me.kayoz.akessentials.commands.TpCommand;
+import me.kayoz.akessentials.commands.*;
 import me.kayoz.akessentials.events.JoinEvent;
 import me.kayoz.akessentials.events.QuitEvent;
 import me.kayoz.akessentials.utils.profile.ProfileListener;
@@ -62,5 +60,11 @@ public final class AkEssentials extends JavaPlugin {
         this.getCommand("message").setExecutor(new MessageCommand());
         this.getCommand("tp").setExecutor(new TpCommand());
         this.getCommand("fly").setExecutor(new FlyCommand());
+        this.getCommand("ores").setExecutor(new OresCommand());
+        this.getCommand("gamemode").setExecutor(new GamemodeCommand());
+        this.getCommand("sudo").setExecutor(new SudoCommand());
+        this.getCommand("sethome").setExecutor(new SetHomeCommand());
+        this.getCommand("delhome").setExecutor(new DeleteHomeCommand());
+        this.getCommand("home").setExecutor(new HomeCommand());
     }
 }

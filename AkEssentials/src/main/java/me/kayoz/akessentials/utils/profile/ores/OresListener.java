@@ -28,7 +28,6 @@ public class OresListener implements Listener {
 
         if (ore != null) {
             profile.getOres().put(ore, profile.getOres().getOrDefault(ore, 0) + 1);
-            p.sendMessage(ore + " " + profile.getOres().get(ore));
         }
 
     }

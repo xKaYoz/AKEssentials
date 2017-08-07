@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Created by KaYoz on 4/10/2017.
@@ -33,6 +34,15 @@ public class ProfileManager {
 
         for(Profile profile : getProfiles()){
             if(profile.getUuid().equals(p.getUniqueId())){
+                return profile;
+            }
+        }
+        return null;
+    }
+
+    public static Profile getProfile(UUID uuid){
+        for(Profile profile : getProfiles()){
+            if(profile.getUuid().equals(uuid)){
                 return profile;
             }
         }

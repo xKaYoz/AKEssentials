@@ -1,5 +1,5 @@
 name: AkEssentials
-version: 0.0.1
+version: 0.0.8
 main: me.kayoz.akessentials.AkEssentials
 commands:
     message:
@@ -10,3 +10,16 @@ commands:
     tp:
        description: Teleport to a Player
        aliases: [tport, teleport]
+    ores:
+       descriptino: Get the ores of a player.
+    gamemode:
+       description: Change a player's gamemode
+       aliases: [gmode, gm, mode]
+    sudo:
+       description: Force a player to chat or use a command.
+    sethome:
+       description: Set your home.
+    delhome:
+       description: Delete your home.
+    home:
+       description: Go to your home.
