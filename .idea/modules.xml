@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AkEssentials/AkEssentials.iml" filepath="$PROJECT_DIR$/AkEssentials/AkEssentials.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bedwars/Bedwars.iml" filepath="$PROJECT_DIR$/Bedwars/Bedwars.iml" />
     </modules>
   </component>
 </project>

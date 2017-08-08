@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="AkEssentials" />
+        <module name="Bedwars" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="AkEssentials" target="1.8" />
+      <module name="Bedwars" target="1.8" />
       <module name="Speed Coding" target="1.8" />
     </bytecodeTargetLevel>
   </component>
