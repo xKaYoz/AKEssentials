@@ -1,5 +1,7 @@
 package me.kayoz.bedwars.game;
 
+import java.util.Random;
+
 /**
  * Created by KaYoz on 8/7/2017.
  * Subscribe to me on Youtube:
@@ -13,6 +15,16 @@ public class GameManager {
     }
 
     public static void stop(){
+
+    }
+
+    private static void selectMap(){
+
+    }
+
+    private static void startGenerators(){
+
+
 
     }
 
