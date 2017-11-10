@@ -4,11 +4,10 @@ import lombok.Getter;
 import lombok.Setter;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
-import org.bukkit.Utility;
 import org.bukkit.World;
+import org.bukkit.configuration.serialization.ConfigurationSerializable;
 import org.bukkit.util.NumberConversions;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -18,7 +17,7 @@ import java.util.HashMap;
  * http://www.youtube.com/c/KaYozMC/
  */
 
-public class Map implements Serializable{
+public class Map implements ConfigurationSerializable{
 
     @Getter
     private String name;
@@ -42,7 +41,7 @@ public class Map implements Serializable{
         this.loc = loc;
     }
 
-    public static Map deserialize(java.util.Map<String, Object> args){
+    public Map(java.util.Map<String, Object> args){
 
         World world = Bukkit.getWorld((String) args.get("world"));
 
@@ -50,15 +49,12 @@ public class Map implements Serializable{
             throw new IllegalArgumentException("Unknown World!");
         }
 
-        return new Map(
-                args.get("creator").toString(),
-                args.get("name").toString(),
-                (ArrayList<Generator>) args.get("generators"),
-                new Location(world, NumberConversions.toDouble(args.get("x")), NumberConversions.toDouble(args.get("y")), NumberConversions.toDouble(args.get("z")
-                )));
+        this.creator = args.get("creator").toString();
+        this.name = args.get("name").toString();
+        this.generators = (ArrayList<Generator>) args.get("generators");
+        this.loc = new Location(world, NumberConversions.toDouble(args.get("x")), NumberConversions.toDouble(args.get("y")), NumberConversions.toDouble(args.get("z")));
     }
 
-    @Utility
     public java.util.Map<String, Object> serialize(){
         java.util.Map<String, Object> data = new HashMap<>();
 

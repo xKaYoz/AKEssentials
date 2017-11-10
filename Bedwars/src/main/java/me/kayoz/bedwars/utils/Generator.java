@@ -4,10 +4,10 @@ import lombok.Getter;
 import lombok.Setter;
 import me.kayoz.bedwars.Bedwars;
 import org.bukkit.*;
+import org.bukkit.configuration.serialization.ConfigurationSerializable;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.NumberConversions;
 
-import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,7 +17,7 @@ import java.util.Map;
  * http://www.youtube.com/c/KaYozMC/
  */
 
-public class Generator implements Serializable {
+public class Generator implements ConfigurationSerializable {
 
     @Getter @Setter
     private World world;
@@ -58,15 +58,19 @@ public class Generator implements Serializable {
         this.drop = drop;
     }
 
-    public static Generator deserialize(String name, Map<String, Object> args){
+    public Generator(Map<String, Object> args){
         World world = Bukkit.getWorld((String) args.get("world"));
 
         if(world == null){
             throw new IllegalArgumentException("Unknown World!");
         }
 
-        return new Generator(name, world, NumberConversions.toDouble(args.get("x")),
-                NumberConversions.toDouble(args.get("y")), NumberConversions.toDouble(args.get("z")), Material.getMaterial((String) args.get("Material")));
+        this.name = args.get("name").toString();
+        this.world = world;
+        this.x = NumberConversions.toDouble(args.get("x"));
+        this.y = NumberConversions.toDouble(args.get("y"));
+        this.z = NumberConversions.toDouble(args.get("z"));
+        this.drop = Material.getMaterial((String) args.get("Material"));
 
     }
 
@@ -96,10 +100,10 @@ public class Generator implements Serializable {
 
     }
 
-    @Utility
     public Map<String, Object> serialize(){
         Map<String, Object> data = new HashMap<>();
 
+        data.put("name", name);
         data.put("world", this.world.getName());
         data.put("x", this.x);
         data.put("y", this.y);

@@ -2,6 +2,7 @@ package me.kayoz.bedwars.utils.team;
 
 import lombok.Getter;
 import lombok.Setter;
+import me.kayoz.bedwars.utils.Chat;
 import me.kayoz.bedwars.utils.users.User;
 import org.bukkit.Color;
 import org.bukkit.Location;
@@ -38,5 +39,11 @@ public class Team {
     public Team(User member){
         this.members.add(member);
         member.setTeam(this);
+    }
+
+    public void message(String str){
+        for(User u : members){
+            u.getPlayer().sendMessage(Chat.format(str));
+        }
     }
 }
