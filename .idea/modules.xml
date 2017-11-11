@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AkEssentials/AkEssentials.iml" filepath="$PROJECT_DIR$/AkEssentials/AkEssentials.iml" />
       <module fileurl="file://$PROJECT_DIR$/Bedwars/Bedwars.iml" filepath="$PROJECT_DIR$/Bedwars/Bedwars.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practice/Practice.iml" filepath="$PROJECT_DIR$/Practice/Practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Speed Coding.iml" filepath="$PROJECT_DIR$/Speed Coding.iml" />
     </modules>
   </component>
 </project>

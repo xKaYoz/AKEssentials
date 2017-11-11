@@ -10,6 +10,8 @@
       <list>
         <option value="$PROJECT_DIR$/AkEssentials/pom.xml" />
         <option value="$PROJECT_DIR$/Bedwars/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/Practice/pom.xml" />
       </list>
     </option>
   </component>

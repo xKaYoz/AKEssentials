@@ -8,11 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="AkEssentials" />
         <module name="Bedwars" />
+        <module name="Practice" />
+        <module name="Speed Coding" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="AkEssentials" target="1.8" />
       <module name="Bedwars" target="1.8" />
+      <module name="Practice" target="1.8" />
       <module name="Speed Coding" target="1.8" />
     </bytecodeTargetLevel>
   </component>
